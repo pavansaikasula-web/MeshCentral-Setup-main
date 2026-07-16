@@ -8,8 +8,6 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
-      - key: PORT
-        value: 10000
       - key: REDIR_PORT
         value: 0
       - key: REDIR_ALIAS_PORT

