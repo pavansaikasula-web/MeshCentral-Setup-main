@@ -11,10 +11,10 @@ services:
       - key: PORT
         value: 10000
       - key: REDIR_PORT
-        value: 80
+        value: 0
       - key: REDIR_ALIAS_PORT
-        value: 80
+        value: 0
       - key: BIND_HOST
         value: 0.0.0.0
       - key: MESHCENTRAL_CERT
-        value: adpagenttest
+        value: meshcentral-setup-main.onrender.com

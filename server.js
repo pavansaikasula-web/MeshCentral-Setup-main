@@ -7,12 +7,15 @@ const certName = process.env.MESHCENTRAL_CERT || 'localhost';
 
 const meshCentralEntry = path.join(__dirname, 'node_modules', 'meshcentral', 'meshcentral.js');
 
+const redirPort = process.env.REDIR_PORT || '0';
+const redirAliasPort = process.env.REDIR_ALIAS_PORT || '0';
+
 const child = spawn(process.execPath, [
   meshCentralEntry,
   '--port', port,
   '--aliasport', port,
-  '--redirport', process.env.REDIR_PORT || '80',
-  '--rediraliasport', process.env.REDIR_ALIAS_PORT || '80',
+  '--redirport', redirPort,
+  '--rediraliasport', redirAliasPort,
   '--portbind', bindHost,
   '--redirportbind', bindHost,
   '--cert', certName
