@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: meshcentral
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: REDIR_PORT
+        value: 80
+      - key: REDIR_ALIAS_PORT
+        value: 80
+      - key: BIND_HOST
+        value: 0.0.0.0
+      - key: MESHCENTRAL_CERT
+        value: adpagenttest
